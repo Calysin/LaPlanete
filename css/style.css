@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+}
+
+.notFilled {
+    border-color: red;
+}
+
+#errorMessage {
+    color: red;
+}

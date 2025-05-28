@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>Quizz</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/script.js"></script>
     </head>
     <body>
         <header>
             <nav>
                 <a href="./accueil.html">Accueil</a>
                 <a href="./apropos.html">A propos</a>
-                <a href="./quizz.html">Quizz</a>
+                <a href="./quizz.html">Quiz</a>
             </nav>
         </header>
-        <form>
-            <fieldset>
+        <form title="Quiz">
+            <fieldset id="informationsField">
                 <legend>Vos informations</legend>
 
                 <label for = "nom">Nom : </label>
@@ -30,52 +30,75 @@
 			    <label for="mail">Adresse mail : </label>
 			    <input type="email" id="mail" class="info"><br>
 
-                <input type="button" value="Choisir le thème du quiz">
+                <input type="button" id="startButton" value="Choisir le thème du quiz" onclick="quizConfirm()">
+                <p id="errorMessage" class="hidden">Veuillez remplir tous les champs</p>
             </fieldset>
-            <fieldset>
+            <fieldset id="themeChoix" class="hidden">
                 <legend>Choix du thème</legend>
 
-                <input type="button" value="Les animaux terrestres">
-                <input type="button" value="Les animaux marins">
+                <input type="button" value="Les animaux terrestres" onclick="afficherTerrestre()">
+                <input type="button" value="Les animaux marins" onclick="afficherMarins()">
             </fieldset>
-            <fieldset>
+            <fieldset id="quizzTerrestres" class="hidden">
                 <legend>Quiz sur les animaux terrestres</legend>
 
                 <label>Quel est le plus gros animal terrestre ?</label><br><br>
                 
-                <input name="radio" type="radio" id="radio1">
-			    <label for="radio1">a) Le chat</label><br>
+                <input name="radio" type="radio" id="radioT1">
+			    <label for="radioT1">a) Le chat</label><br>
 			
-			    <input name="radio" type="radio" id="radio2">
-			    <label for="radio2">b) La baleine</label><br>
+			    <input name="radio" type="radio" id="radioT2">
+			    <label for="radioT2">b) La baleine</label><br>
 			
-			    <input name="radio" type="radio" id="radio3" class="bonneRep">
-			    <label for="radio3">c) L'éléphant</label><br><br>
+			    <input name="radio" type="radio" id="radioT3" class="bonneRep">
+			    <label for="radioT3">c) L'éléphant</label><br><br>
 
-                <input type="button" value="Envoyer les réponses">
-                <input type="button" value="Changer de thème">
+                <label>2. Quel est l'objectif principal de la Green IT</label><br><br>
+			
+                <input type="checkbox" name="checkbox" id="box1">
+                <label for="box1">a) Réduire la consommation d'énergie</label><br>
+                
+                <input type="checkbox" name="checkbox" id="box2">
+                <label for="box2">b) Minimiser les déchets électroniques</label><br>
+                
+                <input type="checkbox" name="checkbox" id="box3">
+                <label for="box3">c) Optimiser les performances des appareils électroniques</label><br><br>
+
+                <input type="button" value="Envoyer les réponses" onclick="submitQuizz('terrestre')">
+                <input type="button" value="Changer de thème" onclick="changerTheme()">
             </fieldset>
-            <fieldset>
+            <fieldset id="quizzMarins" class="hidden" >
                 <legend>Quiz sur les animaux marins</legend>
 
-                <input type="button" value="Envoyer les réponses">
-                <input type="button" value="Changer de thème">
+                <label>Quel est le plus gros animal marin ?</label><br><br>
+
+                <input name="radio" type="radio" id="radioM1">
+			    <label for="radioT1">a) Le chat</label><br>
+			
+			    <input name="radio" type="radio" id="radioM2" class="bonneRep">
+			    <label for="radioT2">b) La baleine</label><br>
+			
+			    <input name="radio" type="radio" id="radioM3">
+			    <label for="radioT3">c) L'éléphant</label><br><br>
+
+                <input type="button" value="Envoyer les réponses" onclick="submitQuizz('marrin')">
+                <input type="button" value="Changer de thème" onclick="changerTheme()">
             </fieldset>
         </form>
         <main class="box">
-		<table id="result">
-			<caption>Resultats du Quiz</caption>
-			<thead>
-				<tr>
-					<td>Essai</td>
-                    <td>Thème</td>
-					<td>Score</td>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
-	</main>
-        <input type="button" value="Effacer l'historique des essais">
+		    <table id="result">
+			    <caption>Resultats du Quiz</caption>
+			    <thead>
+				    <tr>
+					    <td>Essai</td>
+                        <td>Thème</td>
+					    <td>Score</td>
+				    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+		    </table>
+	    </main>
+        <input type="button" value="Effacer l'historique des essais" onclick="emptyScores ()">
     </body>
 </html>
