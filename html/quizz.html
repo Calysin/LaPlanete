@@ -14,5 +14,68 @@
                 <a href="./quizz.html">Quizz</a>
             </nav>
         </header>
+        <form>
+            <fieldset>
+                <legend>Vos informations</legend>
+
+                <label for = "nom">Nom : </label>
+			    <input type="text" id="nom" class="info"><br>
+			
+			    <label for ="prenom">Prénom : </label>
+			    <input type="text" id="prenom" class="info"><br>
+			
+			    <label for ="bd">Date de naissance : </label>
+			    <input type="date" id="bd" class="info"><br>
+			
+			    <label for="mail">Adresse mail : </label>
+			    <input type="email" id="mail" class="info"><br>
+
+                <input type="button" value="Choisir le thème du quiz">
+            </fieldset>
+            <fieldset>
+                <legend>Choix du thème</legend>
+
+                <input type="button" value="Les animaux terrestres">
+                <input type="button" value="Les animaux marins">
+            </fieldset>
+            <fieldset>
+                <legend>Quiz sur les animaux terrestres</legend>
+
+                <label>Quel est le plus gros animal terrestre ?</label><br><br>
+                
+                <input name="radio" type="radio" id="radio1">
+			    <label for="radio1">a) Le chat</label><br>
+			
+			    <input name="radio" type="radio" id="radio2">
+			    <label for="radio2">b) La baleine</label><br>
+			
+			    <input name="radio" type="radio" id="radio3" class="bonneRep">
+			    <label for="radio3">c) L'éléphant</label><br><br>
+
+                <input type="button" value="Envoyer les réponses">
+                <input type="button" value="Changer de thème">
+            </fieldset>
+            <fieldset>
+                <legend>Quiz sur les animaux marins</legend>
+
+                <input type="button" value="Envoyer les réponses">
+                <input type="button" value="Changer de thème">
+            </fieldset>
+        </form>
+        <main class="box">
+		<table id="result">
+			<caption>Resultats du Quiz</caption>
+			<thead>
+				<tr>
+					<td>Essai</td>
+                    <td>Thème</td>
+					<td>Score</td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</main>
+        <input type="button" value="Effacer l'historique des essais">
     </body>
 </html>
