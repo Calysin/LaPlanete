@@ -51,7 +51,6 @@ function loadScores() {
                 for(const score of scores){
                     tentative = i++;
                     tableFilling(score[0],score[1]);
-                    historyScores.addScores(score[0],score[1]);
                 }
             }
             changerTheme();
@@ -134,7 +133,9 @@ function submitQuizz(theme){
     }
     tableFilling(score,theme);
 } 
-    
+
+
+let best = -1;
 function tableFilling(score,theme){  
     //Mettre les données dans le tableau 
     const table = document.getElementById('result').getElementsByTagName('tbody')[0];
@@ -149,12 +150,28 @@ function tableFilling(score,theme){
     const cellTheme = newRow.insertCell(1);
     const cellScore = newRow.insertCell(2);
 
-      // Remplissage des cellules
+      // Remplissage des cellules +vérification du meilleur score et remplissage de la case
+    console.log(theme)
+    const bScore = document.getElementById("bestScore");
     cellTentative.textContent = tentative;
     if (theme==="marin"){
         cellTheme.textContent = "Animaux Marins";
+        if(score>best){
+            bScore.innerHTML = score;
+            best = score;
+            bScore.className = theme;
+        } else if (score === best && bScore.className!== theme){
+            bScore.className = "mix";
+        }
     }else {
         cellTheme.textContent = "Animaux Terrestres";
+        if(score>best){
+            bScore.innerHTML = score;
+            best = score;
+            bScore.className = theme;
+        } else if (score === best && bScore.className!== theme){
+            bScore.className = "mix";
+        }
     }
     cellScore.textContent = score;
 	console.log(score);
@@ -166,6 +183,10 @@ function emptyScores (){
     table.replaceChildren();
     tentative = 0;
     historyScores.removeScores();
+    const bScore = document.getElementById("bestScore");
+    bScore.innerHTML = "";
+    bScore.className = "";
+    best = 0;
 }
 
 window.addEventListener('beforeunload', saveScores);
