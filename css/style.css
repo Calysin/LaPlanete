@@ -1,27 +1,185 @@
+/*    STYLE DU BODY    */
+
+body {
+    background-color: #ddc98e;
+    font-family : Lucida Sans;
+	justify-content : justify;
+}
+
+
+
+
+/*    STYLE DU HEADER ET DU FOOTER    */
+
+header, footer {
+	padding : 15px;
+	text-align : center;
+    background-color: #c78b66;
+    border-radius: 3px;
+}
+
+nav {
+	padding : 10px;
+	margin : 10px;
+	background-color : #ac5a3f90; 
+	border-radius: 5px;
+}
+
+nav p {
+    display: inline;
+    color: #f9efc0;
+}
+
+nav a {
+    margin: 0 2px;
+}
+
+header img, header h1 {
+    display: inline-block;
+}
+
+
+
+
+/*    SECTION RULES    */
+
+section, fieldset, main {
+	margin : 10px auto ; 
+	padding : 15px;
+	background-color : #d4b37e;
+	border-radius : 10px;
+	max-width : 900px;
+    border-color: transparent;
+    color : #3d1305;
+}
+
+
+
+
+/*    PARAGRAPHE RULES    */
+
+/* rules of the paragraphe with class = citation */
+.citation {
+	font-style : italic;
+}
+
+
+
+
+/*    STYLE DU TABLEAU    */
+
+/*Style des bordures du tableau*/
+table, td, caption {
+	border : 1px solid #333;
+}
+
+#result {
+	width : 100%;
+	margin : 10px auto;
+    background-color: #ca976c;
+}
+
+caption {
+	font-size: large;
+}
+
+thead, tfoot {
+	background-color: #d2aa79;
+}
+
+
+
+
+/*    STYLE DES BOUTTONS    */
+
+input[type="button"] {
+    display: inline-block;
+	margin : 2px 0;
+	background-color : #ac5a3f90;
+	color : #f9efc0;
+	font-weight : bold;
+    padding: 8px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+input[type="button"]:hover {
+    background-color : #8b442c90;
+	color : #e8d4a2;
+    border-color: #8b442c;
+}
+
+
+
+/*    LINK RULES    */
+
+/*  Basic Link Forme */
+
+a {
+	text-decoration-line : none;
+	color : #f9efc0;
+	border-radius : 2px;
+	background-color : transparent;
+}
+
+a:hover {
+    color : #e8d4a2;
+}
+
+
+
+
+
+/*______________QUIZ STYLE______________*/
+
+
+
+
+/*Class pour tous les fieldsets qui ne sont pas visible au chargement de la page*/
 .hidden {
     display: none;
 }
 
+
+
+
+/* Style lorsque les informations ne sont pas toutes remplies */
+
+/*Style des informations vides*/
 .notFilled {
-    border-color: red;
+    border-color: #0175c3;
+    border-width: 3px;
 }
-
+/*Style du message d'erreur*/
 #errorMessage {
-    color: red;
+    color: #0175c3;
+    font-weight : bold;
 }
 
+
+
+
+/* Couleur des lignes du tableau et de la case du meilleur score */
+
+/*Style du theme marin*/
 .marin {
     background-color: #ccffff;
 }
 
+/*Style du theme terrestre*/
 .terrestre {
     background-color: #ccff99;
 }
 
+/*Style quand le meilleur score est des deux thèmes à la fois*/
 .mix {
     background-color: #ccffcc;
 }
 
+
+
+
+/*Style du span où est noté le meilleur score*/
 #bestScore {
     display: inline-block;
     border: solid 1px black;
@@ -30,13 +188,7 @@
     height: 20px;
     color: black;
     text-align: center;
+    background-color: #d2aa79;
 }
 
-table, td, caption {
-	border : 1px solid #333;
-}
 
-#result {
-	width : 95%;
-	margin : 10px auto;
-}

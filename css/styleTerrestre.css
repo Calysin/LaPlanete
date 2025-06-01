@@ -1,0 +1,201 @@
+/*    STYLE DU BODY    */
+
+body {
+    background-color: #336600;
+    margin: 0;
+    padding: 0;
+    background: url('../img/jungleBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family : Lucida Sans;
+	justify-content : justify;
+}
+
+
+
+
+/*    STYLE DU HEADER ET DU FOOTER    */
+
+header, footer {
+	padding : 15px;
+	text-align : center;
+    background-color: #67847bAA;
+    margin: 5px 8px;
+    border-radius: 3px;
+}
+
+nav {
+	padding : 10px;
+	margin : 10px;
+	background-color : #32524090; 
+	border-radius: 5px;
+}
+
+nav p {
+    display: inline;
+    color: #e1e9d2;
+}
+
+nav a {
+    margin: 0 2px;
+}
+
+header img, header h1 {
+    display: inline-block;
+}
+
+
+
+
+/*    SECTION RULES    */
+
+section, fieldset, main {
+	margin : 10px auto ; 
+	padding : 15px;
+	background-color : #e9f1d8DD;
+	border-radius : 10px;
+	width: 92%;
+	max-width : 900px;
+    border-color: transparent;
+    color : #193130;
+}
+
+
+
+
+/*    PARAGRAPHE RULES    */
+
+/* rules of the paragraphe with class = citation */
+.citation {
+	font-style : italic;
+}
+
+
+
+
+/*    STYLE DU TABLEAU    */
+
+/*Style des bordures du tableau*/
+table, td, caption {
+	border : 1px solid #333;
+}
+
+#result {
+	width : 100%;
+	margin : 10px auto;
+    background-color: #8e9e95;
+}
+
+caption {
+	font-size: large;
+}
+
+thead, tfoot {
+	background-color: #a1b8a6;
+}
+
+
+
+
+/*    STYLE DES BOUTTONS    */
+
+input[type="button"] {
+    display: inline-block;
+	margin : 2px 2.5%;
+	background-color : #325240;
+	color : #e1e9d2;
+	font-weight : bold;
+    padding: 8px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+input[type="button"]:hover {
+    background-color : #32524090;
+	color : white;
+    border-color: #325240;
+}
+
+
+
+
+
+/*    LINK RULES    */
+
+/*  Basic Link Forme */
+
+a {
+	text-decoration-line : none;
+	color : #e1e9d2;
+	border-radius : 2px;
+	background-color : transparent;
+}
+
+a:hover {
+    color: white;
+}
+
+
+
+
+
+/*______________QUIZ STYLE______________*/
+
+
+
+
+/*Class pour tous les fieldsets qui ne sont pas visible au chargement de la page*/
+.hidden {
+    display: none;
+}
+
+
+
+
+/* Style lorsque les informations ne sont pas toutes remplies */
+
+/*Style des informations vides*/
+.notFilled {
+    border-color: red;
+}
+/*Style du message d'erreur*/
+#errorMessage {
+    color: red;
+}
+
+
+
+
+/* Couleur des lignes du tableau et de la case du meilleur score */
+
+/*Style du theme marin*/
+.marin {
+    background-color: #ccffff;
+}
+
+/*Style du theme terrestre*/
+.terrestre {
+    background-color: #daf8b8;
+}
+
+/*Style quand le meilleur score est des deux thèmes à la fois*/
+.mix {
+    background-color: #ccffcc;
+}
+
+
+
+
+/*Style du span où est noté le meilleur score*/
+#bestScore {
+    display: inline-block;
+    border: solid 1px black;
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    color: black;
+    text-align: center;
+    background-color: #a1b8a6;
+}
+
+

@@ -8,84 +8,161 @@
     </head>
     <body>
         <header>
-            <nav>
-                <a href="./accueil.html">Accueil</a>
+            <a href="./accueil.html">
+                <img src="/img/Logo.png" width="25px" height=auto>
+            </a>
+            <h1>
+				LaPlanète - Quiz
+			</h1>
+			<nav>
+                <a href="./accueil.html">Accueil</a><p>  |  </p>
+                <a href="./aquatique.html">Aquatique</a><p>  |  </p>
+                <a href="./terrestre.html">Terrestre</a><p>  |  </p>
+                <a href="./quizz.html">Quizz</a><p>  |  </p>
                 <a href="./apropos.html">A propos</a>
-                <a href="./quizz.html">Quiz</a>
             </nav>
         </header>
         <form title="Quiz">
+
             <fieldset id="informationsField">
+
                 <legend>Vos informations</legend>
+
 
                 <label for = "nom">Nom : </label>
 			    <input type="text" id="nom" class="info"><br>
 			
+
 			    <label for ="prenom">Prénom : </label>
 			    <input type="text" id="prenom" class="info"><br>
 			
+
 			    <label for ="bd">Date de naissance : </label>
 			    <input type="date" id="bd" class="info"><br>
 			
+
 			    <label for="mail">Adresse mail : </label>
 			    <input type="email" id="mail" class="info"><br>
+
 
                 <input type="button" id="startButton" value="Choisir le thème du quiz" onclick="quizConfirm()">
                 <p id="errorMessage" class="hidden">Veuillez remplir tous les champs</p>
             </fieldset>
+
             <fieldset id="themeChoix" class="hidden">
                 <legend>Choix du thème</legend>
 
-                <input type="button" value="Les animaux terrestres" onclick="afficherTerrestre()">
-                <input type="button" value="Les animaux marins" onclick="afficherMarins()">
+                <input type="button" value="Les écosystèmes terrestres" onclick="afficherTerrestre()">
+                <input type="button" value="Les écosystèmes marins" onclick="afficherMarins()">
             </fieldset>
-            <fieldset id="quizzTerrestres" class="hidden">
-                <legend>Quiz sur les animaux terrestres</legend>
 
-                <label>Quel est le plus gros animal terrestre ?</label><br><br>
+            <fieldset id="quizzTerrestres" class="hidden">
+
+                <legend>Quiz sur les écosystèmes terrestres</legend>
+
+
+
+                <label>En quoi consiste l'ODD 15 ? </label><br><br>
                 
                 <input name="radio" type="radio" id="radioT1">
-			    <label for="radioT1">a) Le chat</label><br>
+			    <label for="radioT1">a) Sauver les pandas et les tigres uniquement </label><br>
 			
 			    <input name="radio" type="radio" id="radioT2">
-			    <label for="radioT2">b) La baleine</label><br>
+			    <label for="radioT2">b) Protéger les océans, les mers et les ressources marine</label><br>
 			
 			    <input name="radio" type="radio" id="radioT3" class="bonneRep">
-			    <label for="radioT3">c) L'éléphant</label><br><br>
+			    <label for="radioT3">c) Préserver les écosystèmes terrestres et lutter contre la déforestation</label><br><br>
 
-                <label>2. Quel est l'objectif principal de la Green IT</label><br><br>
+
+
+                <label>Combien d'hectares de forêt partent en fumée chaque année  ?</label><br><br>
+                
+                <input name="radio1" type="radio" id="radioT4">
+			    <label for="radioT4">a) 1.3 millions</label><br>
 			
-                <input type="checkbox" name="checkbox" id="box1">
-                <label for="box1">a) Réduire la consommation d'énergie</label><br>
+			    <input name="radio1" type="radio" id="radioT5" class="bonneRep">
+			    <label for="radioT5">b) 13 millions</label><br>
+			
+			    <input name="radio1" type="radio" id="radioT6" >
+			    <label for="radioT6">c) 130 mille</label><br><br>
+
+
+
+                <label>Quel sont les solutions qu'on peut mettre en place à l'échelle individuelle ?</label><br><br>
+			
+                <input type="checkbox" name="checkbox" id="boxT1" class="bonneRep">
+                <label for="boxT1">a) Participer à des programmes de reforestation</label><br>
                 
-                <input type="checkbox" name="checkbox" id="box2">
-                <label for="box2">b) Minimiser les déchets électroniques</label><br>
+                <input type="checkbox" name="checkbox" id="boxT2">
+                <label for="boxT2">b) Allumer des feux de camps au milieu de la forêt</label><br>
                 
-                <input type="checkbox" name="checkbox" id="box3">
-                <label for="box3">c) Optimiser les performances des appareils électroniques</label><br><br>
+                <input type="checkbox" name="checkbox" id="boxT3" class="bonneRep">
+                <label for="boxT3">c) Recycler ses papier</label><br>
+
+                <input type="checkbox" name="checkbox" id="boxT4">
+                <label for="boxT4">d) Acheter des object issus d'espèces manacées comme des défences d'éléphants</label><br><br>
+
+
 
                 <input type="button" value="Envoyer les réponses" onclick="submitQuizz('terrestre')">
                 <input type="button" value="Changer de thème" onclick="changerTheme()">
             </fieldset>
+
             <fieldset id="quizzMarins" class="hidden" >
-                <legend>Quiz sur les animaux marins</legend>
 
-                <label>Quel est le plus gros animal marin ?</label><br><br>
+                <legend>Quiz sur les écosystèmes marins</legend>
 
+
+
+                <label>En quoi consiste l'ODD 14 ? </label><br><br>
+                
                 <input name="radio" type="radio" id="radioM1">
-			    <label for="radioT1">a) Le chat</label><br>
+			    <label for="radioM1">a) Sauver les coraux et les baleines à bosse uniquement </label><br>
 			
 			    <input name="radio" type="radio" id="radioM2" class="bonneRep">
-			    <label for="radioT2">b) La baleine</label><br>
+			    <label for="radioM2">b) Protéger les océans, les mers et les ressources marine</label><br>
 			
-			    <input name="radio" type="radio" id="radioM3">
-			    <label for="radioT3">c) L'éléphant</label><br><br>
+			    <input name="radio" type="radio" id="radioM3" >
+			    <label for="radioM3">c) Préserver les écosystèmes terrestres et lutter contre la déforestation</label><br><br>
+
+
+
+
+                <label>Durant les 30 dernières années, quel part des coraux ont disparut ?</label><br><br>
+
+                <input name="radio1" type="radio" id="radioM4" class="bonneRep">
+			    <label for="radioT4">a) 50% </label><br>
+			
+			    <input name="radio1" type="radio" id="radioM5" >
+			    <label for="radioT5">b) 25% </label><br>
+			
+			    <input name="radio1" type="radio" id="radioM6">
+			    <label for="radioT6">c) 45% </label><br><br>
+
+
+
+
+                <label>Quel sont les solutions qu'on peut mettre en place à l'échelle individuelle ?</label><br><br>
+			
+                <input type="checkbox" name="checkbox" id="boxM1">
+                <label for="boxM1">a) Arracher les coraux pour en faire un joli bouquet</label><br>
+                
+                <input type="checkbox" name="checkbox" id="boxM2">
+                <label for="boxM2">b) Faire une croisière à travers une aire marine protégée</label><br>
+                
+                <input type="checkbox" name="checkbox" id="boxM3" class="bonneRep">
+                <label for="boxM3">c) Réduire sa consommation de plastique à usage unique</label><br>
+
+                <input type="checkbox" name="checkbox" id="boxM4" class="bonneRep">
+                <label for="boxM4">d) Choisir des produits de la mer durables (label MSC)</label><br><br>
+
+
 
                 <input type="button" value="Envoyer les réponses" onclick="submitQuizz('marin')">
                 <input type="button" value="Changer de thème" onclick="changerTheme()">
             </fieldset>
         </form>
-        <main class="box">
+        <main id="box">
 		    <table id="result">
 			    <caption>Resultats du Quiz</caption>
 			    <thead>
@@ -98,8 +175,13 @@
 			    <tbody>
 			    </tbody>
 		    </table>
+            <p>Meilleur score : <span id="bestScore"></span></p>
+            <input type="button" value="Effacer l'historique des essais" onclick="emptyScores ()">
 	    </main>
-        <p>Meilleur score : <span id="bestScore"></span></p>
-        <input type="button" value="Effacer l'historique des essais" onclick="emptyScores ()">
+        <footer>
+            <p>©️2025 FIETTE Marie et CHEN Irène</p>
+            <p>Tous droits réservés</p>
+            <a href="./apropos.html">A propos</a>
+        </footer>
     </body>
 </html>

@@ -40,11 +40,13 @@ function loadScores() {
         if (scoresHistory[0][0]!==""){
             const identity = scoresHistory[0];
             var str = document.getElementsByClassName("info");
+            //Remplissage des données de l'utilisateur
             for(let i=0; i<str.length; i++){
                 str[i].value = identity[i];
                 str[i].disabled = true;
                 historyScores.addIdentity(str[i].value,i);
             }
+            //Rmplissage du tableau
             if (scoresHistory[1]) { 
                 const scores = scoresHistory[1];
                 let i = 1;
@@ -82,27 +84,34 @@ function quizConfirm() {
         document.getElementById("errorMessage").style.display = "none";
     }
 
-    //disable les champs d'infos 
+    //si tout remplit disable les champs d'infos 
     for (var i = 0; i<str.length; i++) {
 		str[i].disabled = true;
         historyScores.addIdentity(str[i].value,i);
 	}
 
+    //display du fieldset suivant et retirer le display du bouton
     document.getElementById("themeChoix").style.display = "block";
     document.getElementById("startButton").style.display = "none";
 }
 
+//afficher le fieldset du quiz sur l'écosystème terrestre 
 function afficherTerrestre(){
+    document.querySelector("link[rel='stylesheet']").href = "../css/styleTerrestre.css";
     document.getElementById("quizzTerrestres").style.display = "block";
     document.getElementById("themeChoix").style.display = "none";
 }
 
+//afficher le fieldset du quiz sur l'écosystème marin 
 function afficherMarins(){
+    document.querySelector("link[rel='stylesheet']").href = "../css/styleMarin.css";
     document.getElementById("quizzMarins").style.display = "block";
     document.getElementById("themeChoix").style.display = "none";
 }
 
+//afficher le fieldset de choix du quiz (et retirer ceux des quiz) 
 function changerTheme(){
+    document.querySelector("link[rel='stylesheet']").href = "../css/style.css";
     document.getElementById("quizzTerrestres").style.display = "none";
     document.getElementById("quizzMarins").style.display = "none";
     document.getElementById("themeChoix").style.display = "block";
@@ -122,40 +131,48 @@ function submitQuizz(theme){
         }
     }
 
-//Retirer les selections des réponses 
+    //Vérification si mauvaise checkbox cochée (suite du calcule du score)
+    const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+    for (const check of checked){
+        if (check.className !== "bonneRep"){
+            score-=1.5;
+        }
+    }
+
+    //Retirer les selections des réponses 
     const radio = document.querySelectorAll('input[type="radio"]:checked');
     for (const uncheckRadio of radio){
         uncheckRadio.checked = false;
     }
-    const checked = document.querySelectorAll('input[type="checkbox"]:checked');
     for (const uncheck of checked){
         uncheck.checked = false;
     }
+
+    //appel de la fonction de remplissage du tableau
     tableFilling(score,theme);
 } 
 
 
 let best = -1;
+//Remplissage du tableau 
 function tableFilling(score,theme){  
-    //Mettre les données dans le tableau 
     const table = document.getElementById('result').getElementsByTagName('tbody')[0];
 
-      // Création d'une nouvelle ligne
+    // Création d'une nouvelle ligne
     const newRow = table.insertRow();
-
     newRow.className = theme;
 
-      // Ajout des cellules pour le numéro de tentative et le score
+      // Ajout des cellules pour le numéro de la tentative, le theme et le score
     const cellTentative = newRow.insertCell(0);
     const cellTheme = newRow.insertCell(1);
     const cellScore = newRow.insertCell(2);
 
-      // Remplissage des cellules +vérification du meilleur score et remplissage de la case
+      // Remplissage des cellules et vérification du meilleur score et remplissage de la case
     console.log(theme)
     const bScore = document.getElementById("bestScore");
     cellTentative.textContent = tentative;
     if (theme==="marin"){
-        cellTheme.textContent = "Animaux Marins";
+        cellTheme.textContent = "Ecosystèmes Marins";
         if(score>best){
             bScore.innerHTML = score;
             best = score;
@@ -164,7 +181,7 @@ function tableFilling(score,theme){
             bScore.className = "mix";
         }
     }else {
-        cellTheme.textContent = "Animaux Terrestres";
+        cellTheme.textContent = "Ecosystèmes Terrestres";
         if(score>best){
             bScore.innerHTML = score;
             best = score;
@@ -178,6 +195,7 @@ function tableFilling(score,theme){
     historyScores.addScores(score,theme);
 }
 
+//supression de l'historique des scores 
 function emptyScores (){
     const table = document.getElementById('result').getElementsByTagName('tbody')[0];
     table.replaceChildren();
