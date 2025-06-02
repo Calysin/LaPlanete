@@ -1,7 +1,12 @@
 /*    STYLE DU BODY    */
 
 body {
-    background-color: #ddc98e;
+    background-color: #336600;
+    margin: 0;
+    padding: 0;
+    background: url('../img/jungleBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
     font-family : Lucida Sans;
 	justify-content : justify;
 }
@@ -14,20 +19,21 @@ body {
 header, footer {
 	padding : 15px;
 	text-align : center;
-    background-color: #c78b66;
+    background-color: #67847bAA;
+    margin: 5px 8px;
     border-radius: 3px;
 }
 
 nav {
 	padding : 10px;
 	margin : 10px;
-	background-color : #ac5a3f90; 
+	background-color : #32524090; 
 	border-radius: 5px;
 }
 
 nav p {
     display: inline;
-    color: #f9efc0;
+    color: #e1e9d2;
 }
 
 nav a {
@@ -46,11 +52,12 @@ header img, header h1 {
 section, fieldset, main {
 	margin : 10px auto ; 
 	padding : 15px;
-	background-color : #d4b37e;
+	background-color : #e9f1d8DD;
 	border-radius : 10px;
+	width: 92%;
 	max-width : 900px;
     border-color: transparent;
-    color : #3d1305;
+    color : #193130;
 }
 
 
@@ -76,7 +83,7 @@ table, td, caption {
 #result {
 	width : 100%;
 	margin : 10px auto;
-    background-color: #ca976c;
+    background-color: #8e9e95;
 }
 
 caption {
@@ -84,7 +91,7 @@ caption {
 }
 
 thead, tfoot {
-	background-color: #d2aa79;
+	background-color: #a1b8a6;
 }
 
 
@@ -94,9 +101,9 @@ thead, tfoot {
 
 input[type="button"] {
     display: inline-block;
-	margin : 2px 0;
-	background-color : #ac5a3f90;
-	color : #f9efc0;
+	margin : 2px 2.5%;
+	background-color : #325240;
+	color : #e1e9d2;
 	font-weight : bold;
     padding: 8px;
     border-radius: 5px;
@@ -104,10 +111,12 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color : #8b442c90;
-	color : #e8d4a2;
-    border-color: #8b442c;
+    background-color : #32524090;
+	color : white;
+    border-color: #325240;
 }
+
+
 
 
 
@@ -117,21 +126,13 @@ input[type="button"]:hover {
 
 a {
 	text-decoration-line : none;
-	color : #f9efc0;
+	color : #e1e9d2;
 	border-radius : 2px;
 	background-color : transparent;
 }
 
 a:hover {
-    color : #e8d4a2;
-}
-
-.ref {
-    color: #8b442c;
-}
-
-.ref:hover {
-    color: #6b2b16;
+    color: white;
 }
 
 
@@ -155,13 +156,11 @@ a:hover {
 
 /*Style des informations vides*/
 .notFilled {
-    border-color: #0175c3;
-    border-width: 3px;
+    border-color: red;
 }
 /*Style du message d'erreur*/
 #errorMessage {
-    color: #0175c3;
-    font-weight : bold;
+    color: red;
 }
 
 
@@ -176,7 +175,7 @@ a:hover {
 
 /*Style du theme terrestre*/
 .terrestre {
-    background-color: #ccff99;
+    background-color: #daf8b8;
 }
 
 /*Style quand le meilleur score est des deux thèmes à la fois*/
@@ -196,5 +195,5 @@ a:hover {
     height: 20px;
     color: black;
     text-align: center;
-    background-color: #d2aa79;
+    background-color: #a1b8a6;
 }

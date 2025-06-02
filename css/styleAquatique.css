@@ -1,12 +1,15 @@
 /*    STYLE DU BODY    */
 
 body {
-    background-color: #ddc98e;
+    margin: 0;
+    padding: 0;
+    background-color: #0a3d6e;
+    background: url('../img/marrinBackground.gif') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
     font-family : Lucida Sans;
 	justify-content : justify;
 }
-
-
 
 
 /*    STYLE DU HEADER ET DU FOOTER    */
@@ -14,20 +17,21 @@ body {
 header, footer {
 	padding : 15px;
 	text-align : center;
-    background-color: #c78b66;
+    background-color: #6699b2AA;
+    margin: 5px 8px;
     border-radius: 3px;
 }
 
 nav {
 	padding : 10px;
 	margin : 10px;
-	background-color : #ac5a3f90; 
+	background-color : #004c6b90; 
 	border-radius: 5px;
 }
 
 nav p {
     display: inline;
-    color: #f9efc0;
+    color: #acf4fc;
 }
 
 nav a {
@@ -44,13 +48,14 @@ header img, header h1 {
 /*    SECTION RULES    */
 
 section, fieldset, main {
-	margin : 10px auto ; 
+	margin : 10px auto; 
 	padding : 15px;
-	background-color : #d4b37e;
+	background-color : #acf4fcDD;
 	border-radius : 10px;
+    width: 92%;
 	max-width : 900px;
     border-color: transparent;
-    color : #3d1305;
+    color : #002833;
 }
 
 
@@ -70,13 +75,13 @@ section, fieldset, main {
 
 /*Style des bordures du tableau*/
 table, td, caption {
-	border : 1px solid #333;
+	border : 1px solid #002833;
 }
 
 #result {
 	width : 100%;
 	margin : 10px auto;
-    background-color: #ca976c;
+    background-color: #0988b3;
 }
 
 caption {
@@ -84,7 +89,7 @@ caption {
 }
 
 thead, tfoot {
-	background-color: #d2aa79;
+	background-color: #acf4fc;
 }
 
 
@@ -94,9 +99,9 @@ thead, tfoot {
 
 input[type="button"] {
     display: inline-block;
-	margin : 2px 0;
-	background-color : #ac5a3f90;
-	color : #f9efc0;
+	margin : 2px 2.5%;
+	background-color : #004c6b;
+	color : #acf4fc;
 	font-weight : bold;
     padding: 8px;
     border-radius: 5px;
@@ -104,10 +109,12 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color : #8b442c90;
-	color : #e8d4a2;
-    border-color: #8b442c;
+    background-color : #004c6b90;
+	color : #ccffff;
+    border-color: #004c6b;
 }
+
+
 
 
 
@@ -117,21 +124,13 @@ input[type="button"]:hover {
 
 a {
 	text-decoration-line : none;
-	color : #f9efc0;
+	color : #acf4fc;
 	border-radius : 2px;
 	background-color : transparent;
 }
 
 a:hover {
-    color : #e8d4a2;
-}
-
-.ref {
-    color: #8b442c;
-}
-
-.ref:hover {
-    color: #6b2b16;
+    color: #ccffff;
 }
 
 
@@ -155,13 +154,11 @@ a:hover {
 
 /*Style des informations vides*/
 .notFilled {
-    border-color: #0175c3;
-    border-width: 3px;
+    border-color: red;
 }
 /*Style du message d'erreur*/
 #errorMessage {
-    color: #0175c3;
-    font-weight : bold;
+    color: red;
 }
 
 
@@ -176,7 +173,7 @@ a:hover {
 
 /*Style du theme terrestre*/
 .terrestre {
-    background-color: #ccff99;
+    background-color: #daf8b8;
 }
 
 /*Style quand le meilleur score est des deux thèmes à la fois*/
@@ -196,5 +193,5 @@ a:hover {
     height: 20px;
     color: black;
     text-align: center;
-    background-color: #d2aa79;
+    background-color: #acf4fc;
 }
