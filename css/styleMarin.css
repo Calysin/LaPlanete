@@ -199,7 +199,6 @@ a:hover {
 
 
 
-
 /*IMAGE*/
 #ocean {
     position: relative;
@@ -210,6 +209,7 @@ a:hover {
     width: 100%;
     height: auto;
     display: block;
+    top: 4%;
 }
 
 #ocean img {
@@ -217,34 +217,34 @@ a:hover {
 }
 
 #Baleine {
-    width: 32%;
+    width: 45%;
     height: auto;
-    top: 10%;
+    top: 20%;
     right: 15%;
     z-index: 1;
 }
 
 #Hippocampe {
-    width: 4%;
+    width: 6%;
     height: auto;
-    top: 45%;
+    top: 47%;
     right: 20%;
     z-index: 1;
 }
 
 #PoissonClown {
-    width: 10%;
+    width: 15%;
     height: auto;
     top: 65%;
-    left: 23%;
+    left: 20%;
     z-index: 1;
 }
 
 #Tortue {
-    width: 17%;
+    width: 25%;
     height: auto;
-    top: 82%;
-    right: 42%;
+    bottom: 2%;
+    right: 40%;
     z-index: 1;
 }
 
