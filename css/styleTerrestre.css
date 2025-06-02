@@ -202,13 +202,16 @@ a:hover {
 /*IMAGE*/
 #terrestre {
     position: relative;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 0.75;
+    padding: 0.5%;
 }
 
 #Cactus {
-    width: 100%;
+    width: 99%;
     height: auto;
     display: block;
+    bottom: 1%;
+    border-radius: 5px;
 }
 
 #terrestre img {
@@ -216,33 +219,33 @@ a:hover {
 }
 
 #OranOutan {
-    width: 32%;
+    width: 20%;
     height: auto;
-    top: 10%;
+    bottom: 10%;
     right: 15%;
     z-index: 1;
 }
 
 #PapillonMonarque {
-    width: 4%;
+    width: 10%;
     height: auto;
-    top: 45%;
-    right: 20%;
+    top: 35%;
+    right: 16%;
     z-index: 1;
 }
 
 #Rhinocéros {
-    width: 10%;
+    width: 15%;
     height: auto;
-    top: 65%;
-    left: 23%;
+    bottom: 21%;
+    left: 21%;
     z-index: 1;
 }
 
 #Tigre {
-    width: 17%;
+    width: 25%;
     height: auto;
-    top: 82%;
+    bottom: 2%;
     right: 42%;
     z-index: 1;
 }
@@ -258,6 +261,8 @@ a:hover {
 .image-text {
   position: absolute;
   top: 10px; 
+  width: 94%;
+  left: 1.5%;
   background: #00304290; 
   color: white;
   padding: 10px;
