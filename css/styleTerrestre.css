@@ -197,3 +197,74 @@ a:hover {
     text-align: center;
     background-color: #a1b8a6;
 }
+
+
+/*IMAGE*/
+#terrestre {
+    position: relative;
+    aspect-ratio: 1 / 1;
+}
+
+#Cactus {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#terrestre img {
+    position: absolute;
+}
+
+#OranOutan {
+    width: 32%;
+    height: auto;
+    top: 10%;
+    right: 15%;
+    z-index: 1;
+}
+
+#PapillonMonarque {
+    width: 4%;
+    height: auto;
+    top: 45%;
+    right: 20%;
+    z-index: 1;
+}
+
+#Rhinocéros {
+    width: 10%;
+    height: auto;
+    top: 65%;
+    left: 23%;
+    z-index: 1;
+}
+
+#Tigre {
+    width: 17%;
+    height: auto;
+    top: 82%;
+    right: 42%;
+    z-index: 1;
+}
+
+
+
+/*TEXTE IMAGE*/
+.image-container {
+  display: inline-block;
+
+}
+
+.image-text {
+  position: absolute;
+  top: 10px; 
+  background: #00304290; 
+  color: white;
+  padding: 10px;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-text{
+  opacity: 1; 
+}
