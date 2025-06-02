@@ -58,6 +58,12 @@
                 <input type="button" value="Les écosystèmes marins" onclick="afficherMarins()">
             </fieldset>
 
+
+
+
+            <!--     QUIZ TERRESTRE    -->
+
+
             <fieldset id="quizzTerrestres" class="hidden">
 
                 <legend>Quiz sur les écosystèmes terrestres</legend>
@@ -90,6 +96,35 @@
 
 
 
+                <label>En quoi est fait la corne du Rhinocéros (très prisée et raison de la disparition d'une grande partie de sa population)?</label><br><br>
+                
+                <input name="radio2" type="radio" id="radioT7" class="bonneRep">
+			    <label for="radioT7">a) De kératine, comme les ongles humains</label><br>
+			
+			    <input name="radio2" type="radio" id="radioT8">
+			    <label for="radioT8">b) D'ivoire, comme les défences des éléphants</label><br>
+			
+			    <input name="radio2" type="radio" id="radioT9" >
+			    <label for="radioT9">c) De bois, comme les arbres</label><br><br>
+
+
+
+                <label>Pourquoi la population de papillon monarque a chuté de 80% en 20 ans ?</label><br><br>
+			
+                <input type="checkbox" name="checkbox1" id="boxT5" class="bonneRep">
+                <label for="boxT5">a) La déforestation au Mexique détruit leur lieu d'hivernage</label><br>
+                
+                <input type="checkbox" name="checkbox1" id="boxT6">
+                <label for="boxT6">b) Ils sont chasés depuis qu'ils ont donné leur nom à une Monster</label><br>
+                
+                <input type="checkbox" name="checkbox1" id="boxT7">
+                <label for="boxT7">c) Leur milieu de vie principal a été inondé</label><br>
+
+                <input type="checkbox" name="checkbox1" id="boxT8" class="bonneRep">
+                <label for="boxT8">d) Les pesticides tuent l'asclépiade, leur unique nourriture</label><br><br>
+
+
+
                 <label>Quel sont les solutions qu'on peut mettre en place à l'échelle individuelle ?</label><br><br>
 			
                 <input type="checkbox" name="checkbox" id="boxT1" class="bonneRep">
@@ -109,6 +144,12 @@
                 <input type="button" value="Envoyer les réponses" onclick="submitQuizz('terrestre')">
                 <input type="button" value="Changer de thème" onclick="changerTheme()">
             </fieldset>
+
+
+
+
+            <!--     QUIZ MARIN    -->
+
 
             <fieldset id="quizzMarins" class="hidden" >
 
@@ -133,13 +174,43 @@
                 <label>Durant les 30 dernières années, quel part des coraux ont disparut ?</label><br><br>
 
                 <input name="radio1" type="radio" id="radioM4" class="bonneRep">
-			    <label for="radioT4">a) 50% </label><br>
+			    <label for="radioM4">a) 50% </label><br>
 			
 			    <input name="radio1" type="radio" id="radioM5" >
-			    <label for="radioT5">b) 25% </label><br>
+			    <label for="radioM5">b) 25% </label><br>
 			
 			    <input name="radio1" type="radio" id="radioM6">
-			    <label for="radioT6">c) 45% </label><br><br>
+			    <label for="radioM6">c) 45% </label><br><br>
+
+
+
+
+                <label>A combien est évalué le nombre d'individus capturé par les commerce aquariophile chez les poisson-clown chaque années?</label><br><br>
+
+                <input name="radio2" type="radio" id="radioM7" >
+			    <label for="radioM7">a) 300 mille </label><br>
+			
+			    <input name="radio2" type="radio" id="radioM8" class="bonneRep">
+			    <label for="radioM8">b) 1 Million </label><br>
+			
+			    <input name="radio2" type="radio" id="radioM9">
+			    <label for="radioM9">c) 50 mille </label><br><br>
+
+
+
+                <label>Quel sont les principales raison de la disparition de nombreux individus chez les baleines chaque années ?</label><br><br>
+			
+                <input type="checkbox" name="checkbox1" id="boxM5" class="bonneRep">
+                <label for="boxM5">a) Les collisions avec les navires</label><br>
+                
+                <input type="checkbox" name="checkbox1" id="boxM6">
+                <label for="boxM6">b) Les requins</label><br>
+                
+                <input type="checkbox" name="checkbox1" id="boxM7" class="bonneRep">
+                <label for="boxM7">c) La pollution sonore</label><br>
+
+                <input type="checkbox" name="checkbox1" id="boxM8">
+                <label for="boxM8">d) Avaler les plongeurs</label><br><br>
 
 
 
@@ -177,7 +248,7 @@
 			    <tbody>
 			    </tbody>
 		    </table>
-            <p>Meilleur score : <span id="bestScore"></span></p>
+            <p>Meilleur score : <span id="bestScore"></span> / 21</p>
             <input type="button" value="Effacer l'historique des essais" onclick="emptyScores ()">
 	    </main>
         <footer>
