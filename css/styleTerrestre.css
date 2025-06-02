@@ -44,6 +44,10 @@ header img, header h1 {
     display: inline-block;
 }
 
+header img {
+    width: 25px;
+}
+
 
 
 
