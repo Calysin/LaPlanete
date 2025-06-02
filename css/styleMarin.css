@@ -256,7 +256,9 @@ a:hover {
 
 .image-text {
   position: absolute;
-  top: 10px; 
+  top: 2%; 
+  width: 93%;
+  left : 2%;
   background: #00304290; 
   color: white;
   padding: 10px;
