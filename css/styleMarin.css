@@ -201,9 +201,9 @@ a:hover {
 
 
 /*IMAGE*/
-.aquarium {
+#ocean {
     position: relative;
-    width: 100%; /* Ajustez selon besoin */
+    aspect-ratio: 1 / 1;
 }
 
 #Corail {
@@ -228,8 +228,8 @@ a:hover {
 #Hippocampe {
     width: 4%;
     height: auto;
-    top: 88%;
-    right: 30%;
+    top: 45%;
+    right: 20%;
     z-index: 1;
 }
 
@@ -244,7 +244,7 @@ a:hover {
 #Tortue {
     width: 17%;
     height: auto;
-    top: 88%;
+    top: 82%;
     right: 42%;
     z-index: 1;
 }
