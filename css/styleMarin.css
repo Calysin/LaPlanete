@@ -216,7 +216,6 @@ a:hover {
     position: absolute;
 }
 
-/* Positionnement personnalisable */
 #Baleine {
     width: 32%;
     height: auto;
@@ -249,5 +248,22 @@ a:hover {
     z-index: 1;
 }
 
-#Baleine::after {
-    content: "La baleine bleue peut mesurer jusqu'à 30 mètres";}
+/*TEXTE IMAGE*/
+.image-container {
+  display: inline-block;
+
+}
+
+.image-text {
+  position: absolute;
+  top: 10px; 
+  background: #00304290; 
+  color: white;
+  padding: 10px;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-text{
+  opacity: 1; 
+}
